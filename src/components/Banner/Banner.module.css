@@ -1,0 +1,13 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 200px;
+    background-color: white;
+}
+
+.banner video {
+    height: inherit;
+    flex-grow: 1;
+}

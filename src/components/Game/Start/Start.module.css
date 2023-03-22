@@ -1,0 +1,27 @@
+.start, .tiles, .word {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+.start {
+    flex-direction: column;
+}
+
+.tiles {
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.word {
+    flex-wrap: nowrap;
+    margin: 0 5px;
+}
+
+.space {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}

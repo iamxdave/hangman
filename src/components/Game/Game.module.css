@@ -1,0 +1,13 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: 60vh;
+    background-color: antiquewhite;
+}
+
+.game div {
+    flex-grow: 1;
+}
