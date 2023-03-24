@@ -1,6 +1,8 @@
 import {React, useState, useEffect, useRef} from 'react'
-import Tile from '../../Tile/Tile';
 import styles from './Start.module.css';
+import video from '../../../assets/type.mp4'
+import Tile from '../../Tile/Tile';
+
 
 const Start = (props) => {
   const [password, setPassword] = useState('');
@@ -10,9 +12,8 @@ const Start = (props) => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      const maxTilesWidth = tilesRef.current.clientWidth;
 
-      if(!lastWordRef.current || (lastWordRef.current.children.length <= 12 && maxTilesWidth < window.innerWidth * 0.9)){
+      if(!lastWordRef.current || (lastWordRef.current.children.length <= 11)){
 
         if(event.keyCode >= 65 && event.keyCode <= 90){
           passwordRef.current += event.key;
@@ -20,7 +21,7 @@ const Start = (props) => {
         }
       }
 
-      if(event.keyCode == 32){
+      if(event.keyCode == 32 && passwordRef.current.slice(-1) !== ' '){
         if(passwordRef.current[passwordRef.current.length - 1] !== ' ') {
           passwordRef.current += ' ';
           setPassword(passwordRef.current);
@@ -31,45 +32,39 @@ const Start = (props) => {
         passwordRef.current = passwordRef.current.slice(0,-1);
         setPassword(passwordRef.current);
       }
-    };
 
-    const handleResize = (event) => {
-      const maxTilesWidth = tilesRef.current.clientWidth;
-      
-      if(maxTilesWidth > window.innerWidth * 0.9){
-        passwordRef.current = '';
-        lastWordRef.current = '';
-        setPassword(passwordRef.current);
+      if(event.key === 'Enter' && passwordRef.current !== ''){
+        props.startHandler();
       }
-    }
-
-    window.addEventListener('resize', handleResize)
+    };
 
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   const passwordWords = password.split(' ').map((word, index) => (
-    <div key={index} ref={lastWordRef} className={styles.word}>
+    <span key={index} ref={lastWordRef} className={styles.word}>
       {word.split('').map((letter, index) => (
-        <Tile key={index} letter={letter}/>
+        <Tile key={index} letter={letter} layout='password'/>
       ))}
-    </div>
+    </span>
   ));
+  
+  props.isPasswordHandler(passwordRef.current);
 
   return (
     <div className={styles.start}>
-      <div ref={tilesRef} className={styles.tiles}>
-        {passwordWords}
-      </div>
-      <div>
-        {password}
-      </div>
-      <div>Type letters</div>
+      {passwordRef.current === ''? (
+        <video src={video} autoPlay muted height='200px'/>
+      ) : (
+        <div ref={tilesRef} className={styles.tiles}>
+          {passwordWords}
+          <div className={styles.underline}>x</div>
+        </div>
+      )}
     </div>
   );
 };

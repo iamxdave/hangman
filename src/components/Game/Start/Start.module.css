@@ -1,27 +1,50 @@
-.start, .tiles, .word {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    row-gap: 15px;
-    justify-content: center;
-}
-
 .start {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    height: 70%;
+    width: 70%;
 }
 
 .tiles {
-    max-width: 800px;
-    flex-wrap: wrap;
+    max-height: 120px;
+    text-align: center;
+    overflow: auto;
 }
 
 .word {
-    flex-wrap: nowrap;
-    margin: 0 5px;
+    display: inline-block;
+    margin: 0 0.75em;
+    white-space: nowrap;
 }
 
-.space {
-    width: 50px;
+.underline {
+    display: inline-block;
+    width: 40px;
     height: 50px;
+    color: transparent;
+    text-transform: capitalize;
+    border-bottom: solid 3px aliceblue;
+    font-weight: bold;
+    font-size: xx-large;
     margin: 5px;
+    line-height: 40px;
+    transform: translateX(-12px);
+    animation: flicker 1.4s ease-in-out infinite;
+  }
+  
+@keyframes flicker {
+    0% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
+
+

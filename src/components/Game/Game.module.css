@@ -5,9 +5,23 @@
     flex-direction: column;
     width: auto;
     height: 60vh;
-    background-color: antiquewhite;
+    background-color: #161a1d;
 }
 
-.game div {
-    flex-grow: 1;
+a {
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    color: #f5f3f4;
+    font-family: 'Sanchez', serif;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+a:hover {
+    color: #a4161a;
+    cursor: pointer;
 }

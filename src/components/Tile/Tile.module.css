@@ -1,13 +1,28 @@
-.tile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 50px;
-    min-width: 50px;
-    min-height: 50px;
+.keyboard {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     border-radius: 20%;
-    background-color:darkred;
+    background-color:#0b090a;
     color: aliceblue;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: larger;
     margin: 5px;
     border: 3px solid rgb(110, 1, 1);
+    line-height: 40px;
 }
+
+.password {
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    color: aliceblue;
+    text-transform: capitalize;
+    border-bottom: solid 3px aliceblue;
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 5px;
+    line-height: 40px;
+}
+

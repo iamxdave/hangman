@@ -2,30 +2,34 @@ import { useState, useEffect } from 'react';
 import styles from './Game.module.css';
 import Start from './Start/Start';
 import Hangman from './Hangman/Hangman';
-import Keyboard from './Keyboard/Keyboard';
+import Guesses from './Guesses/Guesses';
 
 
 
 const Game = () => {
     const [start, setStart] = useState(false);
+    const [isPassword, setIsPassword] = useState(false);
 
     const startHandler = () => {
         setStart(prev => !prev);
     }
 
+    const isPasswordHandler = (password) => {
+        setIsPassword(password === ''? false : true);
+    }
 
     return (
         <div className={styles.game}>
             {!start &&
-                <Start/>
+                <Start isPasswordHandler={isPasswordHandler} startHandler={startHandler}/>
             }
             {start && 
                 <div>
                     <Hangman/>
-                    <Keyboard/>
+                    <Guesses/>
                 </div>
             }
-            <button onClick={startHandler}>{start? 'Give up' : 'Start'}</button>
+            {isPassword && <a onClick={startHandler}>{start? 'Give up' : 'Start'}</a>}
         </div>
     );
 }
