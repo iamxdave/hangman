@@ -1,0 +1,32 @@
+.background, .finnish {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    background-color: black;
+    height: inherit;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.finnish {   
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    animation: appear 0.6s linear 0.2s forwards;
+}
+  
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
+  
+  
+

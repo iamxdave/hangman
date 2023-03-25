@@ -1,4 +1,18 @@
 .keyboard {
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+r
+.guessed {
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.keyboard {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -13,6 +27,10 @@
     line-height: 40px;
 }
 
+.keyboard:not(.guessed):hover {
+    background-color:#6a040f;
+}
+
 .password {
     display: inline-block;
     width: 40px;
@@ -24,5 +42,14 @@
     font-size: xx-large;
     margin: 5px;
     line-height: 40px;
+}
+
+.transparent {
+    color: transparent;
+}
+
+.guessed {
+    background-color:rgba(11, 9, 10, 0.3);
+    border: 3px solid rgba(110, 1, 1, 0.3);
 }
 

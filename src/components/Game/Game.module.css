@@ -8,7 +8,8 @@
     background-color: #161a1d;
 }
 
-a {
+
+a, text {
     font-size: 3em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -19,9 +20,14 @@ a {
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+    justify-self: flex-end;
+    margin: 2rem 0rem;
 }
 
 a:hover {
     color: #a4161a;
     cursor: pointer;
 }
+
+
+

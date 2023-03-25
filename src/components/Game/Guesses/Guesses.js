@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Guesses.module.css';
 import Tile from '../../Tile/Tile';
 
-const Guesses = () => {
+const Guesses = ({guesses, addGuess}) => {
     const [input, setInput] = useState('');
 
     const onChange = (input) => {
@@ -20,10 +20,10 @@ const Guesses = () => {
         'z x c v b n m'
     ];
 
-    const keyboard = layout.map(line => (
-        <div className={styles.line}>
-            {line.split(' ').map(l => (
-                 <Tile letter={l} layout='keyboard'/>
+    const keyboard = layout.map((line, index) => (
+        <div key={index}>
+            {line.split(' ').map((l, i) => (
+                <Tile key={i} letter={l} layout='keyboard' guessed={guesses.find(g => g === l)} addGuess={addGuess}/>
             ))}
         </div>
     ));
