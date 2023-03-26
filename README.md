@@ -78,7 +78,7 @@ npm run start
 <!-- HOW DOES IT WORK-->
 ## How does it work 📔
 <p align="justify">
-  The application was made based on a game [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) and following its rules.
+  The application was made based on a game <a href="https://www.one-to-one.ca/wp-content/uploads/2016/01/Hangman.pdf" target="_blank">Hangman</a> and following its rules.
   The game is simple, one person is choosing a password, and the other must guess it without making to many mistakes.
 </p>
   
@@ -93,10 +93,6 @@ npm run start
 ![image](https://user-images.githubusercontent.com/74014874/227797403-23d1a5c6-08de-440f-8a80-11a2e2fbc66e.png)
 
   _After pressing start you can start guessing a password, you can use your keyboard or GUI_
-
-![image](https://user-images.githubusercontent.com/74014874/227797439-457661cf-f250-4e85-89fa-6a072dc73f16.png)
-
-  _I recorded a short gifs to represent how the app works in a practise._
 
   _A short gif representing how to use the app._
   
