@@ -32,7 +32,7 @@
 <!-- ABOUT -->
 ## About 🤔
 <p align="justify">
-  Game is a result of my first experience with React. I tried to make the game to provide its users 👥 a great experience 🎮.
+  Game is the result of my first experience with React. I tried to make the game to provide its users 👥 a great experience 🎮.
 </p>
 
 
