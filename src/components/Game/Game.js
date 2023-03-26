@@ -18,6 +18,7 @@ const Game = () => {
       setStart(p => !p);
       setPassword('');
       setGuesses([]);
+      setMistakes(0);
     }
 
 
@@ -34,8 +35,8 @@ const Game = () => {
             
             !alreadyGuessed && setGuesses(p => [...p, letter]);
 
-            if(!password.split('').find(l => l === letter)) {
-              setMistakes(p => p++);
+            if(!alreadyGuessed && !password.split('').find(l => l === letter)) {
+              setMistakes(p => p + 1);
             }
 
           } else {
@@ -47,7 +48,7 @@ const Game = () => {
               }
 
             }  
-            if(event.keyCode == 32 && password.slice(-1) !== ' '){
+            if(event.keyCode === 32 && password.slice(-1) !== ' '){
               if(password[password.length - 1] !== ' ') {
                   setPassword(p => p + ' ');
               }
@@ -70,15 +71,14 @@ const Game = () => {
         };
     }, [start, password, guesses]);
 
-    const win = (password && password.replace(' ','').split('').every(l => guesses.includes(l)));
-    //TODO
-    const lose = mistakes > 3;
+    const win = (password && password.replace(/ /g,'').split('').every(l => guesses.includes(l)));
+    const lose = mistakes > 5;
+    const finnishMessage = win === true? 'win' : 'lose';
 
-    console.log(start);
     return (
       <div className={styles.game}>
-        {((win || lose) && start) && <Finnish condition={win} restart={restart}/>}
-        <Hangman />
+        {((win || lose) && start) && <Finnish condition={finnishMessage} restart={restart}/>}
+        {start && <Hangman mistakes={mistakes}/>}
         <Start
           password={password}
           lastWordRef={lastWordRef}

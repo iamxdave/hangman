@@ -4,7 +4,7 @@
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
-r
+
 .guessed {
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -12,19 +12,24 @@ r
     transition: all .5s ease-in-out;
 }
 
-.keyboard {
+.keyboard, .password {
     display: inline-block;
+    color: aliceblue;
     width: 50px;
     height: 50px;
-    border-radius: 20%;
-    background-color:#0b090a;
-    color: aliceblue;
+    max-width: 100px;
+    max-height: 100px;
     text-transform: capitalize;
     font-weight: bold;
-    font-size: larger;
     margin: 5px;
-    border: 3px solid rgb(110, 1, 1);
     line-height: 40px;
+}
+
+.keyboard {
+    border-radius: 20%;
+    background-color:#0b090a;
+    font-size: larger;
+    border: 3px solid rgb(110, 1, 1);
 }
 
 .keyboard:not(.guessed):hover {
@@ -32,16 +37,8 @@ r
 }
 
 .password {
-    display: inline-block;
-    width: 40px;
-    height: 50px;
-    color: aliceblue;
-    text-transform: capitalize;
     border-bottom: solid 3px aliceblue;
-    font-weight: bold;
     font-size: xx-large;
-    margin: 5px;
-    line-height: 40px;
 }
 
 .transparent {

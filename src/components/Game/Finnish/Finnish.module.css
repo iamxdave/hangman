@@ -14,8 +14,20 @@
 }
 
 .finnish {   
-    opacity: 1;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    color: #f5f3f4;
+    font-family: 'Sanchez', serif;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    justify-self: flex-end;
+    margin: 2rem 0rem;
 }
+
 
 .hidden {
     opacity: 0;
