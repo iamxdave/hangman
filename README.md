@@ -1,4 +1,4 @@
-<h1 align="center">Goassign.me</h1>
+<h1 align="center">Hangman The Game</h1>
 <p align="center">
  Responsive hangman game created with React.js, Javascript, CSS and HTML.
 </p>
