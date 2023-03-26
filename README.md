@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+<h1 align="center">Goassign.me</h1>
+<p align="center">
+ Responsive hangman game created with React.js, Javascript, CSS and HTML.
+</p>
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents :page_with_curl:</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-">About 🤔 </a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started-">Getting started 🚀</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-does-it-work-">How does it work 📔</a></li>
+    <li><a href="#visualization-camera-with-a-guide-">Visualization :camera: with a guide 📙</a></li>
+    <li><a href="#contributing-heart">Contributing ❤️</a></li>
+    <li><a href="#license-">License 📝</a></li>
+    <li><a href="#contact-">Contact ☎</a></li>
+  </ol>
+</details>
 
-## Available Scripts
+<!-- ABOUT -->
+## About 🤔
+<p align="justify">
+  Game is a result of my first experience with React. I tried to make the game to provide its users 👥 a great experience 🎮.
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+### Built With 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [React](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- GETTING STARTED -->
+## Getting started 🚀
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Git](https://git-scm.com/) 
+  * Follow the guide
+    > https://github.com/git-guides/install-git
+* [Node.JS](https://nodejs.org/en/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Use your command line and clone the repository:
+```
+ git clone https://github.com/iamxdave/hangman.git
+```
+2. Go to the clonned folder: 
+```
+cd hangman
+```
+3. Install packages
+```
+npm -i
+```
+4. Run application in terminal
+```
+npm run start
+```
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- HOW DOES IT WORK-->
+## How does it work 📔
+<p align="justify">
+  The application was made based on a game [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) and following its rules.
+  The game is simple, one person is choosing a password, and the other must guess it without making to many mistakes.
+</p>
+  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- VISUALIZATION AND GUIDE -->
+## Visualization :camera: with a guide 📙
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  _The application has only one page on which website redirect the user on start where you can provide your password._
+  
+![image](https://user-images.githubusercontent.com/74014874/227797403-23d1a5c6-08de-440f-8a80-11a2e2fbc66e.png)
 
-## Learn More
+  _After pressing start you can start guessing a password, you can use your keyboard or GUI_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/74014874/227797439-457661cf-f250-4e85-89fa-6a072dc73f16.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  _I recorded a short gifs to represent how the app works in a practise._
 
-### Code Splitting
+  _A short gif representing how to use the app._
+  
+![hangman](https://user-images.githubusercontent.com/74014874/227797615-a25053a6-2831-4841-b461-e257ec9caf29.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br/>
 
-### Analyzing the Bundle Size
+<!-- CONTRIBUTING -->
+## Contributing :heart:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="justify">
+ Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <b>greatly appreciated</b>.
+</p>
 
-### Making a Progressive Web App
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- LICENSE -->
+## License 📝
+<p align="justify"> 
+ Copyright 2022 iamxdave
 
-### Advanced Configuration
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> http://www.apache.org/licenses/LICENSE-2.0
 
-### Deployment
+<p align="justify"> 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+</p>
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- CONTACT -->
+## Contact ☎
 
-### `npm run build` fails to minify
+dawidwrobelx@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/iamxdave/hangman](https://github.com/iamxdave/hangman)
+
